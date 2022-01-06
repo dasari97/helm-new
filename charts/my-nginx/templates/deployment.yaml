@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels: 
-    {{ .Values.label }}: {{.Values.appname}}
+    {{ .Values.label.appname }}
   name: nginx
 spec:
   replicas: {{ .Values.replicaCount  }}
