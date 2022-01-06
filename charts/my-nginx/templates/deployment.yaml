@@ -6,7 +6,7 @@ metadata:
     app: nginx
   name: nginx
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicaCount  }}
   selector:
     matchLabels:
       app: nginx
@@ -18,7 +18,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - image: nginx
+      - image: {{ .Values.image }}
         name: nginx
         resources: {}
 status: {}
