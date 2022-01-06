@@ -1,4 +1,5 @@
 replicaCount: 2
 image: nginx
-label: ["app: nginx"]
+label: app
+appname: nginx
   
