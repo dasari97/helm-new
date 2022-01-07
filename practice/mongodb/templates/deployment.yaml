@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels: 
-    {{ .Values.label.appname }}
+    {{ include ".Values.labels" . | nindent 4 }}
   name: mongodb
 spec:
   replicas: {{ .Values.replicaCount  }}
   selector:
     matchLabels:
-      {{ .Values.label.appname }}
+      {{ include ".Values.labels" . | nindent 6 }}
   strategy: {}
   template:
     metadata:
       labels:
-        {{ .Values.label.appname }}
+        {{ include ".Values.labels" . | nindent 8 }}
     spec:
       containers:
       - image: {{ .Values.image }}
