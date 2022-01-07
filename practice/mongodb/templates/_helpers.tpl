@@ -1,4 +1,3 @@
 {{- define ".Values.labels" -}}
-labels:
-  appname: mongodb
+ appname: mongodb
 {{- end }}
