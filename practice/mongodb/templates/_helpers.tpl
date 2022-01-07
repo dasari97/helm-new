@@ -2,14 +2,14 @@
  appname: mongodb
 {{- end }}
 
-{{- define "demo.selectorLabels" -}}
+{{- define ".Values.selectorLabels" -}}
 app.kubernetes.io/name: {{ include ".Values.labels" . }}
 {{- end }}
 
-{{- define ".Values.app" -}}
+{{- define "Values.app" -}}
  appname: mongo-express
 {{- end }}
 
-{{- define "demo.selectorLabels" -}}
+{{- define "Values.selectorLabels" -}}
 app.kubernetes.io/name: {{ include ".Values.app" . }}
 {{- end }}
