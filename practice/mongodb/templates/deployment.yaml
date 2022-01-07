@@ -13,7 +13,7 @@ spec:
   template:
     metadata:
       labels:
-        {{- include ".Values.labels" . | nindent 4 }}
+        {{- include ".Values.labels" . | nindent 8 }}
     spec:
       containers:
       - image: {{ .Values.image }}
