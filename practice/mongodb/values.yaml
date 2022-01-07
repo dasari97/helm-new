@@ -5,3 +5,4 @@ replicaCount: 1
 expressNodePort: 8081
 expressContainerPort: 8081
 nodePort: 30000
+expressimage: mongo-express
