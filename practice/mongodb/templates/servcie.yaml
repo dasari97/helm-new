@@ -3,10 +3,10 @@ kind: Service
 metadata: 
   name: mongodb
   labels:
-    {{ include ".Values.labels" . | nindent 4 }}
+    {{- include ".Values.labels" . | nindent 4 }}
 spec:
   selector:
-    app: {{ include ".Values.labels" . | nindent 4 }}
+    app: mongodb
   ports:
     - protocol: TCP
       port: {{ .Values.nodeMongoport }}
