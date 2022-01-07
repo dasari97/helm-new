@@ -2,3 +2,6 @@ containerMongoport: 27017
 nodeMongoport: 27017
 image: mongo
 replicaCount: 1
+expressNodePort: 8081
+expressContainerPort: 8081
+nodePort: 30000
