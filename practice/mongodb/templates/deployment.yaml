@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels: 
-    {{ .Values.label.app }}
+    {{ .Values.label.appname }}
   name: mongodb
 spec:
   replicas: {{ .Values.replicaCount  }}
   selector:
     matchLabels:
-      {{ .Values.label.app }}
+      {{ .Values.label.appname }}
   strategy: {}
   template:
     metadata:
       labels:
-        {{ .Values.label.app }}
+        {{ .Values.label.appname }}
     spec:
       containers:
       - image: {{ .Values.image }}

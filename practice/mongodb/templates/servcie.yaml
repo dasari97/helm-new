@@ -3,10 +3,10 @@ kind: Service
 metadata: 
   name: mongodb
   labels:
-    {{ .Values.label.app }}
+    {{ .Values.label.appname }}
 spec:
   selector:
-    app: {{ .Values.label.app }}
+    app: {{ .Values.label.appname }}
   ports:
     - protocol: TCP
       port: {{ .Values.nodeMongoport }}
