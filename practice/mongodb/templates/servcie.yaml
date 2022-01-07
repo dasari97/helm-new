@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: mongodb
+spec:
+  selector:
+    {{ .Values.label.app }}
+  ports:
+    - protocol: TCP
+      port: {{ .Values.node-mongoport }}
+      targetPort: {{ .Values.container-mongoport }}

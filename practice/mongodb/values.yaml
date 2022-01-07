@@ -1,0 +1,6 @@
+container-mongoport: 27017
+node-mongoport: 27017
+label:
+  app: mongodb
+image: mongo
+replicaCount: 1
