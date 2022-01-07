@@ -8,7 +8,7 @@ spec:
   replicas: {{ .Values.replicaCount  }}
   selector:
     matchLabels:
-      {{- include ".Values.labels" . | nindent 4 }}
+      {{- include ".Values.labels" . | nindent 6 }}
   strategy: {}
   template:
     metadata:
