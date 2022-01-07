@@ -1,5 +1,5 @@
-container-mongoport: 27017
-node-mongoport: 27017
+containerMongoport: 27017
+nodeMongoport: 27017
 label:
   app: mongodb
 image: mongo

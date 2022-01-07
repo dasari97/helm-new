@@ -7,5 +7,5 @@ spec:
     {{ .Values.label.app }}
   ports:
     - protocol: TCP
-      port: {{ .Values.node-mongoport }}
-      targetPort: {{ .Values.container-mongoport }}
+      port: {{ .Values.nodeMongoport }}
+      targetPort: {{ .Values.containerMongoport }}
