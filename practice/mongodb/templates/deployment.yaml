@@ -13,7 +13,7 @@ spec:
   template:
     metadata:
       labels:
-        {{- include ".Values.labels" . | nindent 8 }}
+        app: mongodb
     spec:
       containers:
       - image: {{ .Values.image }}
