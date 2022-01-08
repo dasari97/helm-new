@@ -19,16 +19,16 @@ kind: Deployment
 metadata:
   name: mongo-express
   labels:
-    {{- include ".Values.app" . | nindent 4 }}
+    {{- include "express.labels" . | nindent 4 }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      {{- include ".Values.app" . | nindent 6 }}
+      {{- include "express.labels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include ".Values.app" . | nindent 8 }}
+        {{- include "express.labels" . | nindent 8 }}
     spec:
       containers:
       - name: mongo-express
