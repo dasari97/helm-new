@@ -3,7 +3,7 @@
 {{- end }}
 
 {{- define "mongodb.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "mongodb.labels" . }}
+ {{ include "mongodb.labels" . }}
 {{- end }}
 
 {{- define "express.labels" -}}
@@ -11,5 +11,5 @@ app.kubernetes.io/name: {{ include "mongodb.labels" . }}
 {{- end }}
 
 {{- define "express.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "express.labels" . }}
+ {{ include "express.labels" . }}
 {{- end }}
