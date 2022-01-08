@@ -6,10 +6,10 @@
 app.kubernetes.io/name: {{ include ".Values.labels" . }}
 {{- end }}
 
-{{- define "Values.app" -}}
+{{- define "mongo.labels" -}}
  appname: mongo-express
 {{- end }}
 
-{{- define "Values.selectorLabels" -}}
-app.kubernetes.io/name: {{ include ".Values.app" . }}
+{{- define "mongo.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "mongo.labels" . }}
 {{- end }}
