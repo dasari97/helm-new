@@ -1,4 +1,7 @@
 #!/bin/bash
+#set the Hostname by uncommenting the following lines
+#Hostname=
+#hostnamectl set-hostname "$Hostname"
 ##shell script or userdata for Linux instance to add a user.
 #Enter your username here
 name= 
