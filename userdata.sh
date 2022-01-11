@@ -8,7 +8,7 @@ password=
 #creating files to redirect logs 
 touch /tmp/log
 ##adding user to instance owner 
-id $user &>>/tmp/log
+id "$user" &>>/tmp/log
 if [ $? -eq 0 ]; then
     echo "User already there, So Skipping" &>>/tmp/log
 else
